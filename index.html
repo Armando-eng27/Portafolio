@@ -17,7 +17,7 @@
             --accent-blue: #38bdf8;
             --accent-indigo: #818cf8;
             --text-main: #f8fafc;
-            --text-muted-custom: #cbd5e1; /* Color claro para alto contraste */
+            --text-muted-custom: #cbd5e1;
         }
 
         body {
@@ -27,9 +27,8 @@
             scroll-behavior: smooth;
         }
 
-        /* Corrección explícita para textos legibles */
         .text-muted {
-            color: #cbd5e1 !important; /* Gris claro de alta legibilidad */
+            color: #cbd5e1 !important;
         }
 
         .code-font {
@@ -413,82 +412,86 @@
                             <span class="badge bg-dark text-light border border-secondary">UniFi / Network</span>
                             <span class="badge bg-dark text-light border border-secondary">CCTV Dahua</span>
                         </div>
-                        <!-- SISTEMA TALLER AUTOMOTRIZ -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="custom-card p-4 d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <span class="badge-tech">Python / Flask</span>
-                                    <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
-                                </div>
-                                <h5 class="fw-bold text-white mb-2">Sistema de Gestión para Taller Automotriz</h5>
-                                <p class="text-muted small flex-grow-1">
-                                    Plataforma para el control de órdenes de servicio, seguimiento del estatus de reparación por vehículo/placa, inventario de refacciones y recepción de clientes.
-                                </p>
-                                <div class="d-flex flex-wrap gap-1 mb-2">
-                                    <span class="badge bg-dark text-light border border-secondary">Python</span>
-                                    <span class="badge bg-dark text-light border border-secondary">Flask</span>
-                                    <span class="badge bg-dark text-light border border-secondary">MySQL</span>
-                                    <span class="badge bg-dark text-light border border-secondary">Bootstrap 5</span>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
 
-                        <!-- SISTEMA PAPELERÍA -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="custom-card p-4 d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <span class="badge-tech">Punto de Venta</span>
-                                    <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
-                                </div>
-                                <h5 class="fw-bold text-white mb-2">POS & Control de Inventarios para Papelería</h5>
-                                <p class="text-muted small flex-grow-1">
-                                    Sistema de punto de venta con búsqueda rápida de productos por código de barras, administración de existencias en almacén, cortes de caja y registro de ventas.
-                                </p>
-                                <div class="d-flex flex-wrap gap-1 mb-2">
-                                    <span class="badge bg-dark text-light border border-secondary">Python</span>
-                                    <span class="badge bg-dark text-light border border-secondary">MySQL</span>
-                                    <span class="badge bg-dark text-light border border-secondary">Bootstrap 5</span>
-                                </div>
-                            </div>
+                <!-- PROYECTO 9: TALLER AUTOMOTRIZ -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Python / Flask</span>
+                            <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
                         </div>
-                        <!-- SISTEMA ESTÉTICA / SALÓN DE BELLEZA -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="custom-card p-4 d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <span class="badge-tech">Gestión & Citas</span>
-                                    <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
-                                </div>
-                                <h5 class="fw-bold text-white mb-2">Sistema de Citas y Agenda para Salón de Belleza</h5>
-                                <p class="text-muted small flex-grow-1">
-                                    Aplicación web para agendamiento de citas de clientes, asignación de personal/estilistas, control de insumos de estética y registro de servicios realizados.
-                                </p>
-                                <div class="d-flex flex-wrap gap-1 mb-2">
-                                    <span class="badge bg-dark text-light border border-secondary">PHP / Python</span>
-                                    <span class="badge bg-dark text-light border border-secondary">MySQL</span>
-                                    <span class="badge bg-dark text-light border border-secondary">JavaScript</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- SISTEMA ESTUDIO DE TATUAJES -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="custom-card p-4 d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <span class="badge-tech">Agenda & Clientes</span>
-                                    <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
-                                </div>
-                                <h5 class="fw-bold text-white mb-2">Sistema de Control para Estudio de Tatuajes</h5>
-                                <p class="text-muted small flex-grow-1">
-                                    Plataforma para gestión de agenda por artista/tatuador, control de anticipos, registro de fichas técnicas de clientes y catálogo de servicios por sucursal.
-                                </p>
-                                <div class="d-flex flex-wrap gap-1 mb-2">
-                                    <span class="badge bg-dark text-light border border-secondary">PHP / Python</span>
-                                    <span class="badge bg-dark text-light border border-secondary">MySQL</span>
-                                    <span class="badge bg-dark text-light border border-secondary">Bootstrap 5</span>
-                                </div>
-                            </div>
+                        <h5 class="fw-bold text-white mb-2">Sistema de Gestión para Taller Automotriz</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Plataforma para el control de órdenes de servicio, seguimiento del estatus de reparación por vehículo/placa, inventario de refacciones y recepción de clientes.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">Python</span>
+                            <span class="badge bg-dark text-light border border-secondary">Flask</span>
+                            <span class="badge bg-dark text-light border border-secondary">MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">Bootstrap 5</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- PROYECTO 10: PAPELERÍA -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Punto de Venta</span>
+                            <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">POS & Control de Inventarios para Papelería</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Sistema de punto de venta con búsqueda rápida de productos por código de barras, administración de existencias en almacén, cortes de caja y registro de ventas.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">Python</span>
+                            <span class="badge bg-dark text-light border border-secondary">MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 11: ESTÉTICA -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Gestión & Citas</span>
+                            <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Sistema de Citas y Agenda para Salón de Belleza</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Aplicación web para agendamiento de citas de clientes, asignación de personal/estilistas, control de insumos de estética y registro de servicios realizados.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">PHP / Python</span>
+                            <span class="badge bg-dark text-light border border-secondary">MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 12: TATUAJES -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Agenda & Clientes</span>
+                            <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Sistema de Control para Estudio de Tatuajes</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Plataforma para gestión de agenda por artista/tatuador, control de anticipos, registro de fichas técnicas de clientes y catálogo de servicios por sucursal.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">PHP / Python</span>
+                            <span class="badge bg-dark text-light border border-secondary">MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
