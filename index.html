@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armando Zárate | Ingeniero de Sistemas & Developer</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0b1329;
+            --bg-card: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-indigo: #818cf8;
+            --text-main: #f8fafc;
+            --text-muted-custom: #cbd5e1; /* Color claro para alto contraste */
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Corrección explícita para textos legibles */
+        .text-muted {
+            color: #cbd5e1 !important; /* Gris claro de alta legibilidad */
+        }
+
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(11, 19, 41, 0.95) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--accent-blue) !important;
+        }
+
+        .nav-link {
+            color: #e2e8f0 !important;
+        }
+        .nav-link:hover {
+            color: var(--accent-blue) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 130px 0 80px 0;
+            background: radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.12) 0%, rgba(11, 19, 41, 0) 70%);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            color: #38bdf8 !important;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .badge-status {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7 !important;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        /* Cards */
+        .custom-card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.5);
+            box-shadow: 0 12px 30px -10px rgba(56, 189, 248, 0.2);
+        }
+
+        .badge-tech {
+            background-color: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 6px;
+        }
+
+        .badge-security {
+            background-color: rgba(245, 158, 11, 0.15);
+            color: #fcd34d;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            font-size: 0.78rem;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .skill-box {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 22px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .skill-box:hover {
+            background: var(--bg-card);
+            border-color: var(--accent-indigo);
+        }
+
+        .skill-icon {
+            font-size: 2.3rem;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 10px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary-custom:hover {
+            background: linear-gradient(135deg, #0369a1 0%, #1d4ed8 100%);
+            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 10px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-outline-custom:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #060a12;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand code-font fs-4" href="#">
+                &lt;ArmandoZárate.<span class="text-white">Dev</span> /&gt;
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 fw-semibold fs-6">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#perfil">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-section">
+        <div class="container text-center text-lg-start">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-10 mx-auto text-center">
+                    <div class="mb-3">
+                        <span class="badge-status d-inline-flex align-items-center gap-2">
+                            <i class="bi bi-circle-fill fs-6" style="font-size: 8px !important;"></i>
+                            Disponible para Oportunidades Laborales
+                        </span>
+                    </div>
+                    <p class="hero-subtitle code-font text-uppercase mb-2">Ingeniero de Sistemas | SysAdmin & Developer</p>
+                    <h1 class="hero-title mb-4">Armando Zárate Hernández</h1>
+                    <p class="lead text-muted mb-4 fs-5 fw-normal" style="color: #cbd5e1 !important;">
+                        Ingeniero en TIC con 5 años de trayectoria combinando la administración de infraestructura crítica con el desarrollo de software a medida en Python y PHP. Optimización de flujos operativos y reducción de tiempos de procesamiento de semanas a minutos.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="#proyectos" class="btn btn-primary-custom d-flex align-items-center gap-2">
+                            <i class="bi bi-cpu"></i> Ver Sistemas Desarrollados
+                        </a>
+                        <a href="https://github.com/armando-eng27" target="_blank" class="btn btn-outline-custom d-flex align-items-center gap-2 code-font">
+                            <i class="bi bi-github"></i> GitHub (armando-eng27)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFIL PROFESIONAL -->
+    <section id="perfil" class="py-5">
+        <div class="container py-4">
+            <div class="p-4 p-md-5 rounded-4" style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.12);">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-4 text-center border-end-md" style="border-color: rgba(255,255,255,0.15) !important;">
+                        <h2 class="fw-bold text-info display-4 mb-0">5 Años</h2>
+                        <p class="text-muted mb-0 small text-uppercase fw-semibold" style="color: #cbd5e1 !important;">Experiencia Comprobada</p>
+                    </div>
+                    <div class="col-md-8">
+                        <h4 class="fw-bold text-white mb-3"><i class="bi bi-shield-check text-info me-2"></i>Perfil Técnico Versátil</h4>
+                        <p class="text-muted mb-0 fs-6" style="color: #cbd5e1 !important;">
+                            Especialista en soporte técnico avanzado, administración de servidores, redes estructuradas, bases de datos corporativas y ERPs como Aspel SAE. Experiencia en entornos de alta exigencia (SEPROCESA y Policía de Investigación - PDI), integrando desarrollo backend seguro con infraestructura de red y videovigilancia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <section id="proyectos" class="py-5">
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+                <div>
+                    <span class="text-info code-font text-uppercase fw-semibold">// Portafolio Oficial</span>
+                    <h2 class="fw-bold text-white fs-1 mb-0">Sistemas y Proyectos Realizados</h2>
+                </div>
+                <p class="text-muted mb-0" style="max-width: 480px; color: #cbd5e1 !important;">
+                    <i class="bi bi-lock-fill text-warning me-1"></i> Fichas técnicas alineadas a proyectos reales en producción y prototipos con resguardo de propiedad intelectual.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- PROYECTO 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Python / Flask</span>
+                            <span class="badge-security"><i class="bi bi-check-circle-fill me-1"></i>Producción</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Sistema de Gestión de Tickets de Servicio</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Plataforma backend para centralizar y administrar requerimientos de soporte técnico de usuarios en múltiples sedes corporativas (Zaragoza, Reyes-Aculco, Prado Norte).
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">Python</span>
+                            <span class="badge bg-dark text-light border border-secondary">Flask</span>
+                            <span class="badge bg-dark text-light border border-secondary">MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Python / Automatización</span>
+                            <span class="badge-security"><i class="bi bi-check-circle-fill me-1"></i>Producción</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Catálogo Digital de Personal Autorizado</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Plataforma automatizada que sustituyó un flujo obsoleto en Word, acelerando el alta/baja y consulta en tiempo real de ingenieros de servicio asignados a ruta.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">Python</span>
+                            <span class="badge bg-dark text-light border border-secondary">Base de Datos</span>
+                            <span class="badge bg-dark text-light border border-secondary">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">PHP / Consultas SQL</span>
+                            <span class="badge-security"><i class="bi bi-check-circle-fill me-1"></i>Producción</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Búsqueda Centralizada de Pólizas</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Herramienta web en PHP para la localización rápida de pólizas de mantenimiento por número de serie, razón social o factura, conectada a reportes de bases de datos.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">PHP</span>
+                            <span class="badge bg-dark text-light border border-secondary">SQL Server / MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">App Móvil / Seguridad</span>
+                            <span class="badge-security"><i class="bi bi-shield-lock-fill me-1"></i>Confidencial</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">App Móvil de Video Inteligencia (PDI)</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Aplicación móvil a medida desarrollada para el personal operativo de la Policía de Investigación, optimizando el canal de consulta e información de inteligencia.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">Mobile Dev</span>
+                            <span class="badge bg-dark text-light border border-secondary">API Security</span>
+                            <span class="badge bg-dark text-light border border-secondary">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Punto de Venta</span>
+                            <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Sistema POS & Control de Inventarios</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Plataforma integral para administración de ventas, control de existencias, catálogo de productos y cortes de caja en tiempo real.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">PHP / Python</span>
+                            <span class="badge bg-dark text-light border border-secondary">MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Portal E-Learning</span>
+                            <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Portal de Capacitación & Certificación</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Sistema de e-learning con segregación de cursos por áreas operativas, seguimiento de progreso y generación dinámica de diplomas PDF.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">Flask</span>
+                            <span class="badge bg-dark text-light border border-secondary">MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">ReportLab PDF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 7 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Web Móvil / QR</span>
+                            <span class="badge-security"><i class="bi bi-play-circle me-1"></i>Demostración</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Registro de Asistencia vía Código QR</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Sistema móvil para escaneo rápido de credenciales QR, registro de bitácora de ingenieros en campo y validación de horarios con estampas de tiempo.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">JavaScript</span>
+                            <span class="badge bg-dark text-light border border-secondary">PHP / MySQL</span>
+                            <span class="badge bg-dark text-light border border-secondary">QR Scanner API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 8 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card p-4 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge-tech">Infraestructura TI</span>
+                            <span class="badge-security"><i class="bi bi-check-circle-fill me-1"></i>Desplegado</span>
+                        </div>
+                        <h5 class="fw-bold text-white mb-2">Redes Corporativas & CCTV Dahua</h5>
+                        <p class="text-muted small flex-grow-1" style="color: #cbd5e1 !important;">
+                            Instalación de cableado estructurado (tubo conduit, charofil, racks), configuración de Active Directory, switches administrables UniFi y sistemas CCTV IP.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mb-2">
+                            <span class="badge bg-dark text-light border border-secondary">Active Directory</span>
+                            <span class="badge bg-dark text-light border border-secondary">UniFi / Network</span>
+                            <span class="badge bg-dark text-light border border-secondary">CCTV Dahua</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES TÉCNICAS -->
+    <section id="habilidades" class="py-5" style="background: rgba(11, 19, 41, 0.8);">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-info code-font text-uppercase fw-semibold">// Dominio Técnico</span>
+                <h2 class="fw-bold text-white fs-1">Stack Tecnológico & Competencias</h2>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="skill-box">
+                        <i class="bi bi-filetype-py skill-icon"></i>
+                        <h5 class="fw-bold text-white mb-1">Python & PHP</h5>
+                        <p class="text-muted small mb-0" style="color: #cbd5e1 !important;">Flask, Backend, Automatización & Scripting</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-box">
+                        <i class="bi bi-database skill-icon text-success"></i>
+                        <h5 class="fw-bold text-white mb-1">Bases de Datos</h5>
+                        <p class="text-muted small mb-0" style="color: #cbd5e1 !important;">MySQL, SQLite, SQL Server & Consultas</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-box">
+                        <i class="bi bi-display skill-icon text-warning"></i>
+                        <h5 class="fw-bold text-white mb-1">Sistemas & ERP</h5>
+                        <p class="text-muted small mb-0" style="color: #cbd5e1 !important;">Aspel SAE (Reinstalables/Soporte), Active Directory</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-box">
+                        <i class="bi bi-hdd-network skill-icon text-info"></i>
+                        <h5 class="fw-bold text-white mb-1">Redes & Hardware</h5>
+                        <p class="text-muted small mb-0" style="color: #cbd5e1 !important;">Cableado Conduit/Charofil, Racks, UniFi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACTO -->
+    <footer id="contacto" class="py-5 text-center text-md-start">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-md-6">
+                    <h3 class="fw-bold text-white mb-2">Armando Zárate Hernández</h3>
+                    <p class="text-muted mb-0" style="color: #cbd5e1 !important;"><i class="bi bi-geo-alt me-1"></i> Estado de México / CDMX | <i class="bi bi-telephone me-1"></i> 5521791692</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-inline-flex gap-3 align-items-center flex-wrap">
+                        <a href="https://github.com/armando-eng27" target="_blank" class="btn btn-outline-custom p-3 fs-5">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="mailto:armandozh_tics@hotmail.com" class="btn btn-primary-custom d-inline-flex align-items-center gap-2">
+                            <i class="bi bi-envelope-fill"></i> Contactar por Correo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.1);">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 small text-muted" style="color: #94a3b8 !important;">
+                <span>&copy; 2026 Armando Zárate — Portafolio Profesional de Ingeniería & Desarrollo</span>
+                <span class="code-font">GitHub Pages: armando-eng27</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
